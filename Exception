@@ -32,3 +32,6 @@ return concat('EmpId ',id,' not found');
 end;
 $$
 $$ language plpgsql;
+
+select delete emp(3);
+select delete emp(5);
