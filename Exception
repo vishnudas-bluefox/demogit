@@ -1,0 +1,29 @@
+Create or replace function dev(arg int) returns text as $$
+declare
+res int;
+begin
+res=100/arg;
+return res;
+exception
+when division_by_zero
+then return 'sorry divided by zero error';
+end;
+$$
+$$ language plpgsql;
+
+create table employee(empid int primary key,dept varchar(15),location varchar(20));
+insert into employee values(1,'police','idukki'),(2,'cyber','kozhikode'),(3,'civil','wayanad');
+
+
+Create or replace function del_emp(id int) returns text as $$
+begin
+delete from employee where empid=id;
+if not found then raise exception '';
+end if;
+return concat('Employee record deleted');
+exception
+when raise_exception then
+return concat('EmpId ',id,' not found');
+end;
+$$
+$$ language plpgsql;
