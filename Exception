@@ -11,6 +11,11 @@ end;
 $$
 $$ language plpgsql;
 
+select test(0);
+select test(10);
+
+
+
 create table employee(empid int primary key,dept varchar(15),location varchar(20));
 insert into employee values(1,'police','idukki'),(2,'cyber','kozhikode'),(3,'civil','wayanad');
 
