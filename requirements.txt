@@ -1,0 +1,15 @@
+image==1.5.27
+numpy==1.17.4
+Pillow==6.2.1
+requests==2.22.0
+opencv-python
+olefile==0.46
+PyAutoGUI==0.9.48
+PyMsgBox==1.0.7
+pyobjc-core==6.2
+pyobjc-framework-Cocoa==6.1
+pyobjc-framework-Quartz==5.3
+PyScreeze==0.1.26
+PyScreeze==0.1.26
+PyTweening==1.0.3
+pathlib
